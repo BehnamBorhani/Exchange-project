@@ -21,6 +21,8 @@
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
 }
 
 .row.reverse {
@@ -54,6 +56,8 @@
   -ms-flex: 0 0 auto;
   -webkit-box-flex: 0;
   flex: 0 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .col-xs {
@@ -266,6 +270,8 @@
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   .col-sm {
@@ -479,6 +485,8 @@
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   .col-md {
@@ -692,6 +700,8 @@
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   .col-lg {
