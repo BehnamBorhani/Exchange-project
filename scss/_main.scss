@@ -1,0 +1,35 @@
+/* import fonts */
+@font-face {
+   font-family: iran;
+   src: url(../fonts/iran.ttf);
+}
+
+@font-face {
+   font-family: iranYekan;
+   src: url(../fonts/iranyekanwebbold.ttf);
+}
+
+@font-face {
+   font-family: koodak;
+   src: url(../fonts/KoodakBold.ttf);
+}
+
+@font-face {
+   font-family: nazanin;
+   src: url(../fonts/Nazanin.ttf);
+}
+
+@font-face {
+   font-family: yekan;
+   src: url(../fonts/Yekan.ttf);
+}
+
+/* css reset */
+* {
+   margin: 0;
+   padding: 0;
+   direction: rtl;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: yekan;
+}
