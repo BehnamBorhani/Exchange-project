@@ -36,7 +36,7 @@
 }
 
 .dark {
-  --color-primary: #191d2b;
+  --color-primary: #17122B;
   --color-secondary: #03ca9b;
   --color-white: #ffffff;
   --color-black: #000;
@@ -194,4 +194,55 @@ body::-webkit-scrollbar-thumb:hover {
   z-index: 95;
 }
 
-/* navbar ends *//*# sourceMappingURL=style.css.map */
+/* navbar ends */
+.btn {
+  border: none;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-secondary);
+  box-shadow: 0 0 25px var(--color-secondary);
+  padding: 10px 20px;
+  transition: box-shadow 0.5s;
+}
+.btn:hover {
+  box-shadow: 0 0 5px var(--color-secondary), 0 0 25px var(--color-secondary), 0 0 50px var(--color-secondary), 0 0 100px var(--color-secondary);
+}
+
+.btn2 {
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  background-color: #fff;
+}
+
+/* header starts */
+header {
+  width: 100%;
+  margin-top: 100px;
+  font-size: 2rem;
+  color: var(--color-white);
+}
+header h2 {
+  font-weight: 100;
+  font-size: 3.5rem;
+  height: 60px;
+  margin-top: 150px;
+}
+header #highlight {
+  color: var(--color-secondary);
+  opacity: 1;
+  transition: all 1s;
+}
+header p {
+  font-size: 1.5rem;
+  margin-bottom: 100px;
+}
+header a {
+  margin-right: 20px;
+}
+header #banner {
+  height: 700px;
+}
+
+/* header ends *//*# sourceMappingURL=style.css.map */
