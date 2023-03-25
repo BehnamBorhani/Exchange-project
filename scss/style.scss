@@ -1,2 +1,30 @@
 @import "main";
+@import "layouts";
 
+/* header starts */
+header {
+   width: 100%;
+   margin-top: 100px;
+   font-size: 2rem;
+   color: var(--color-white);
+   h2 {
+      font-weight: 100;
+      font-size: 3.5rem;
+      height: 60px;
+      margin-top: 150px;
+   }
+
+   p {
+      font-size: 1.5rem;
+      margin-bottom: 100px;
+   }
+
+   a {
+      margin-right: 20px;
+   }
+
+   #banner {
+      height: 700px;
+   }
+}
+/* header ends */
