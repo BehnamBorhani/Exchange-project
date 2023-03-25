@@ -11,6 +11,7 @@ window.addEventListener("load", () => {
    setInterval(() => {
       highlightElem.innerText = words[index].word;
       highlightElem.style.color = words[index].color;
+      // highlightElem.style.color = "var(--color-secondary)";
       index++;
 
       if (index >= words.length) {

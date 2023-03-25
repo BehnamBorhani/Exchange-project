@@ -38,7 +38,7 @@
 .dark {
   --color-primary: #17122B;
   --color-secondary: #03ca9b;
-  --color-white: #ffffff;
+  --color-white: #fff;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
@@ -118,6 +118,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: 75px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 25px 30px 20px 30px;
   box-shadow: var(--box-shadow-1);
   background-color: var(--color-primary);
@@ -125,6 +126,22 @@ body::-webkit-scrollbar-thumb:hover {
   top: 0;
   z-index: 90;
   transition: background 0.4s;
+  /* ul {
+     width: 400px;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     margin-left: 10px;
+     li a {
+        color: var(--color-white);
+        font-size: 20px;
+        font-weight: 500;
+        transition: color 0.4s;
+     }
+  } */
+  /* hamburger menu starts */
+  /* darkmode switch starts */
+  /* hamburger menu ends */
 }
 #navbar .logo a {
   display: flex;
@@ -140,18 +157,116 @@ body::-webkit-scrollbar-thumb:hover {
   margin-bottom: 10px;
   transition: height 0.4s;
 }
-#navbar ul {
-  width: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-left: 10px;
+#navbar #menu__toggle {
+  display: none;
 }
-#navbar ul li a {
-  color: var(--color-white);
+#navbar #menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+  background-color: var(--color-white);
+}
+#navbar #menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  background-color: var(--color-white);
+  transform: rotate(0deg);
+}
+#navbar #menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  background-color: var(--color-white);
+  transform: rotate(90deg);
+}
+#navbar #menu__toggle:checked ~ .menu__box {
+  right: 0 !important;
+}
+#navbar .menu__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1;
+}
+#navbar .menu__btn > span, #navbar .menu__btn > span::before, #navbar .menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-white);
+  transition-duration: 0.25s;
+}
+#navbar .menu__btn > span::before {
+  content: "";
+  top: -10px;
+}
+#navbar .menu__btn > span::after {
+  content: "";
+  top: 10px;
+}
+#navbar .menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: var(--color-secondary);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.25s;
+  /* dynamic color setting starts */
+  /* dynamic color setting ends */
+}
+#navbar .menu__box .menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
-  font-weight: 500;
-  transition: color 0.4s;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition-duration: 0.25s;
+}
+#navbar .menu__box .menu__item:hover {
+  background-color: #cfd8dc;
+}
+#navbar .menu__box #setting {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+#navbar .menu__box #setting hr {
+  border-color: #000;
+}
+#navbar .menu__box #themes {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+#navbar .menu__box #themes .theme {
+  height: 25px;
+  width: 25px;
+  border: 3px solid #dddddd;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#navbar .menu__box #themes .theme1 {
+  background-color: #3498db;
+}
+#navbar .menu__box #themes .theme2 {
+  background-color: #ff1756;
+}
+#navbar .menu__box #themes .theme3 {
+  background-color: #1cb65d;
+}
+#navbar .menu__box #themes .theme4 {
+  background-color: #8e44ad;
+}
+#navbar .menu__box #themes .theme5 {
+  background-color: #f4b932;
 }
 #navbar .switch {
   width: 80px;
@@ -159,7 +274,8 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 20px;
   background-color: var(--color-white);
   position: relative;
-  margin-left: auto;
+  margin: auto;
+  /* darkmode switch ends */
 }
 #navbar .switch .flicker {
   width: 30px;
