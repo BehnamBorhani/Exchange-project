@@ -39,16 +39,40 @@
             </a>
          </div>
          
-         <ul>
+         <!-- <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">FAQs</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">About</a></li>
-         </ul>
+         </ul> -->
 
-         <div class="switch">
-            <div class="flicker"></div>
-            <div class="moon"></div>
+         <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+        
+            <ul class="menu__box">
+              <li><a class="menu__item" href="#">Home</a></li>
+              <li><a class="menu__item" href="#">About</a></li>
+              <li><a class="menu__item" href="#">Team</a></li>
+              <li><a class="menu__item" href="#">Contact</a></li>
+              <li><a class="menu__item" href="#">Twitter</a></li>
+              <li id="setting">Setting <hr></li>
+              <li id="themes">
+               <span class="theme theme1" data-color="#3498db"></span>
+               <span class="theme theme2" data-color="#ff1756"></span>
+               <span class="theme theme3" data-color="#03ca9b"></span>
+               <span class="theme theme4" data-color="#a914e9"></span>
+               <span class="theme theme5" data-color="#f4b932"></span>
+              </li>
+              <li>
+               <div class="switch">
+                  <div class="flicker"></div>
+                  <div class="moon"></div>
+               </div>
+              </li>
+            </ul>
          </div>
       </nav>
       <div id="scroll"></div>
