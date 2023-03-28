@@ -38,6 +38,7 @@
    --color-grey-6: #12181b;
    --br-sm-2: 14px;
    --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
+   --box-shadow-2: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
 .dark {
@@ -53,6 +54,7 @@
    --color-grey-5: #2a2e35;
    --color-grey-6: #12181b;
    --box-shadow-1: 0 3px 15px rgba(255, 255, 255, 0.3);
+   --box-shadow-2: 0 3px 15px rgb(255, 255, 255);
 }
 
 /* css reset */
@@ -63,7 +65,7 @@
    list-style: none;
    text-decoration: none;
    box-sizing: border-box;
-   font-family: yekan;
+   // font-family: yekan;
    position: relative;
 }
 
