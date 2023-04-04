@@ -1,3 +1,9 @@
+/* market overview starts */
+/* fetch("http://rest.coinapi.io/v1/assets/icons/32?apikey=08F3391E-4647-41E2-A39B-7884EE0EE74D")
+   .then((res) => res.json())
+   .then((res) => console.log(res)); */
+/* market overview ends */
+
 /* preloader starts */
 const preloaderElem = document.querySelector(".preloader");
 
@@ -58,7 +64,10 @@ const themeBtns = document.querySelectorAll(".theme");
 themeBtns.forEach(function (themeBtn) {
    themeBtn.addEventListener("click", function (event) {
       let themeColor = event.target.dataset.color;
-      document.documentElement.style.setProperty("--color-secondary", themeColor);
+      document.documentElement.style.setProperty(
+         "--color-secondary",
+         themeColor
+      );
    });
 });
 /* dynamic theme setting ends */

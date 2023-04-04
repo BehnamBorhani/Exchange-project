@@ -4,7 +4,7 @@
 /* header starts */
 header {
    width: 100%;
-   margin-top: 100px;
+   margin-top: 40px;
    font-size: 2rem;
    color: var(--color-white);
    h2 {
@@ -34,3 +34,70 @@ header {
    }
 }
 /* header ends */
+
+/* market overview starts */
+#market-overview {
+   width: 80%;
+   margin: auto;
+   font-size: 20px;
+   font-weight: bold;
+   table {
+      width: 100%;
+      background-color: #eee;
+      box-shadow: var(--box-shadow-2);
+      border-radius: 10px;
+      padding: 10px;
+      caption {
+         color: var(--color-white);
+         padding-bottom: 10px;
+      }
+
+      td {
+         width: 20%;
+         text-align: center;
+         &:first-child {
+            width: 5%;
+         }
+      }
+
+      thead {
+         text-align: center;
+         td {
+            padding: 10px;
+         }
+      }
+
+      tbody {
+         tr {
+            td {
+               border-top: 1px solid black;
+               padding: 10px 0;
+            }
+
+            .name {
+               width: 100%;
+               @include d-flex(flex-start, center);
+               img {
+                  width: 30px;
+                  margin: 10px;
+               }
+            }
+
+            .price {
+               // text-align: center;
+            }
+
+            .change {
+               // text-align: center;
+            }
+
+            .chart {
+               img {
+                  color: red;
+               }
+            }
+         }
+      }
+   }
+}
+/* market overview ends */
