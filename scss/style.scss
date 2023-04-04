@@ -35,7 +35,6 @@ header {
 }
 /* header ends */
 
-
 /* market overview starts */
 #market-overview {
    width: 80%;
@@ -67,34 +66,32 @@ header {
             padding: 10px;
          }
       }
+
       tbody {
-         tr{
-            td{
+         tr {
+            td {
                border-top: 1px solid black;
                padding: 10px 0;
             }
 
-            .name{
+            .name {
                width: 100%;
-               display: flex;
-               justify-content: flex-start;
-               align-items: center;
+               @include d-flex(flex-start, center);
                img {
                   width: 30px;
                   margin: 10px;
                }
             }
 
-            .price{
+            .price {
                // text-align: center;
-            }            
-
-            .change{
-               // text-align: center;
-               
             }
 
-            .chart{
+            .change {
+               // text-align: center;
+            }
+
+            .chart {
                img {
                   color: red;
                }
