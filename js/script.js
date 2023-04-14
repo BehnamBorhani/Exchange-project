@@ -57,11 +57,8 @@ window.onload = function () {
 const themeBtns = document.querySelectorAll(".theme");
 themeBtns.forEach(function (themeBtn) {
    themeBtn.addEventListener("click", function (event) {
-      let themeColor = event.target.dataset.color;
-      document.documentElement.style.setProperty(
-         "--color-secondary",
-         themeColor
-      );
+      let themeColor = event.target.style.background;
+      document.documentElement.style.setProperty("--color-primary", themeColor);
    });
 });
 /* dynamic theme setting ends */

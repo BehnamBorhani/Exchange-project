@@ -6,7 +6,7 @@ header {
    width: 100%;
    margin-top: 40px;
    font-size: 2rem;
-   color: var(--color-white);
+   color: var(--black);
    h2 {
       font-weight: 100;
       font-size: 3.5rem;
@@ -15,7 +15,7 @@ header {
    }
 
    #highlight {
-      color: var(--color-secondary);
+      color: var(--color-primary);
       opacity: 1;
       transition: all 1s;
    }
@@ -41,14 +41,16 @@ header {
    margin: auto;
    font-size: 20px;
    font-weight: bold;
+   color: var(--black);
    table {
       width: 100%;
-      background-color: #eee;
-      box-shadow: var(--box-shadow-2);
+      background-color: var(--bg);
+      box-shadow: var(--box-shadow);
+      border: var(--border);
       border-radius: 10px;
       padding: 10px;
       caption {
-         color: var(--color-white);
+         color: var(--black);
          padding-bottom: 10px;
       }
 
@@ -122,7 +124,7 @@ header {
             position: relative;
             .img-container {
                position: relative;
-               filter: drop-shadow(5px 5px 10px #71717180);
+               filter: drop-shadow(0 0 5px var(--black));
                img {
                   width: 100%;
                }
@@ -147,7 +149,7 @@ header {
                      font-weight: bold;
                      position: relative;
                      margin-top: 15px;
-                     color: var(--color-secondary);
+                     color: var(--color-primary);
                      &::before {
                         content: "";
                         display: block;
@@ -160,7 +162,7 @@ header {
                      span {
                         font-size: 32px;
                         font-weight: lighter;
-                        color: var(--color-white);
+                        color: var(--black);
                      }
                   }
                }
@@ -170,7 +172,7 @@ header {
                   font-size: 16px;
                   font-weight: 400;
                   line-height: 30px;
-                  color: var(--color-white);
+                  color: var(--black);
                }
             }
 
