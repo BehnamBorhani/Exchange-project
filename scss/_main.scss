@@ -1,3 +1,5 @@
+@import "layouts";
+
 /* import fonts */
 @font-face {
    font-family: iran;
@@ -36,6 +38,22 @@
    --color-grey-4: #454e56;
    --color-grey-5: #f8f8f8;
    --color-grey-6: #12181b;
+   --bg-pink-gradient: linear-gradient(
+      to left,
+      rgb(254 132 100) 0,
+      rgb(254 110 154) 100%
+   );
+   --bg-green-gradient: linear-gradient(
+      to left,
+      rgb(51 200 193) 0,
+      rgb(17 155 210) 100%
+   );
+   --bg-blue-gradient: linear-gradient(
+      to left,
+      rgb(54 28 193) 0,
+      rgb(46 130 239) 100%
+   );
+
    --br-sm-2: 14px;
    --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
    --box-shadow-2: 0 3px 15px rgba(0, 0, 0, 0.3);
@@ -70,6 +88,7 @@
 }
 
 body {
+   overflow-x: hidden;
    background-color: var(--color-primary);
    transition: 0.3s;
    /* width */
