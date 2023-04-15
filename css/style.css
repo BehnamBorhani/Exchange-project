@@ -433,7 +433,7 @@ header #banner {
 }
 #market-overview table tbody tr .name img {
   width: 30px;
-  margin: 10px;
+  margin: 10px 30px 20px 10px;
 }
 #market-overview table tbody tr .chart img {
   color: red;
