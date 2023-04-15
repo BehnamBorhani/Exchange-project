@@ -47,8 +47,8 @@
   --light-bg: #f8f8f8;
   --light-color: #666;
   --border: 1px solid rgba(0, 0, 0, 0.1);
-  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  --box-shadow1: -5px 5px 10px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  --box-shadow1: -5px 5px 10px rgba(0, 0, 0, 0.3);
   --bg-pink-gradient: linear-gradient(
      to left,
      rgb(254 132 100) 0,
@@ -177,10 +177,8 @@ body::-webkit-scrollbar-thumb:hover {
   letter-spacing: 3px;
   color: var(--color-primary);
 }
-#navbar .logo a img {
-  height: 30px;
-  margin-bottom: 10px;
-  transition: height 0.4s;
+#navbar .logo a svg {
+  margin-left: 5px;
 }
 #navbar #menu__toggle {
   display: none;
@@ -520,6 +518,8 @@ header #banner {
   display: grid;
   place-content: center;
   background: var(--bg-green-gradient);
+  box-shadow: var(--box-shadow1);
+  border: var(--border);
   transform: rotate(-45deg);
 }
 #facts-sec .container .row .left .counter-container .box .counter-item {
