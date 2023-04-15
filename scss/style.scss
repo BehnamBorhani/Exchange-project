@@ -81,7 +81,7 @@ header {
                @include d-flex(flex-start, center);
                img {
                   width: 30px;
-                  margin: 10px;
+                  margin: 10px 30px 20px 10px;
                }
             }
 
@@ -187,6 +187,8 @@ header {
                   display: grid;
                   place-content: center;
                   background: var(--bg-green-gradient);
+                  box-shadow: var(--box-shadow1);
+                  border: var(--border);
                   transform: rotate(-45deg);
                   .counter-item {
                      text-align: center;
