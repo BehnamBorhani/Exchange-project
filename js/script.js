@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
 
 /* navbar starts */
 const navbar = document.querySelector("#navbar");
-const logoImg = document.querySelector(".logo img");
+// const logoImg = document.querySelector(".logo img");
 let customScroll = document.querySelector("#scroll");
 
 document.addEventListener("scroll", function () {
@@ -20,11 +20,11 @@ document.addEventListener("scroll", function () {
    customScroll.style.width = scrollPercentRounded + "%";
 
    if (document.documentElement.scrollTop > 0) {
-      logoImg.style.height = "30px";
+      // logoImg.style.height = "30px";
       /* navbar.classList.add("bg-black");
       navbar.classList.add("txt-white"); */
    } else {
-      logoImg.style.height = "30px";
+      // logoImg.style.height = "30px";
       /* navbar.classList.remove("bg-black");
       navbar.classList.remove("txt-white"); */
    }
