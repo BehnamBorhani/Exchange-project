@@ -335,6 +335,29 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* navbar ends */
+/* sections Title starts */
+.section-title {
+  display: grid;
+  place-items: center;
+}
+.section-title h2 {
+  font-size: 40px;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  color: var(--black);
+}
+.section-title h2::after {
+  content: "";
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-primary);
+}
+
+/* sections Title ends*/
 .btn {
   border: none;
   border-radius: 7px;
@@ -443,6 +466,7 @@ header #banner {
   width: 100%;
   height: 600px;
   margin-top: 70px;
+  margin-bottom: 50px;
   direction: rtl;
 }
 #facts-sec .container {
@@ -546,108 +570,25 @@ header #banner {
 
 /* fact section ends*/
 /* team section starts */
-#team-section .card-client {
-  background: var(--color-primary);
-  width: 100%;
-  height: 300px;
-  padding: 25px 20px;
-  border: var(--border);
-  box-shadow: var(--box-shadow);
-  border-radius: 10px;
+#team-section .section-title {
+  display: grid;
+  place-items: center;
+}
+#team-section .section-title h2 {
+  font-size: 40px;
+  display: inline-block;
+  text-transform: uppercase;
   text-align: center;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: all 0.3s ease;
-}
-#team-section .card-client:hover {
-  transform: translateY(-10px);
-}
-#team-section .card-client .user-picture {
-  overflow: hidden;
-  width: 100px;
-  height: 100px;
-  border: 4px solid #7cdacc;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: auto;
-  /* svg {
-     width: 2.5rem;
-     fill: currentColor;
-  } */
+  color: var(--black);
 }
-#team-section .card-client .user-picture img {
-  width: 90%;
-  height: 90%;
-  border-radius: 50%;
-}
-#team-section .card-client .name-client {
-  margin: 0;
-  margin-top: 20px;
-  font-weight: 600;
-  font-size: 20px;
-}
-#team-section .card-client .name-client span {
+#team-section .section-title h2::after {
+  content: "";
   display: block;
-  font-weight: 200;
-  font-size: 18px;
-}
-#team-section .card-client .social-media:before {
-  content: " ";
-  display: block;
+  margin: 10px auto;
   width: 100%;
-  height: 2px;
-  margin: 20px 0;
-  background: #7cdacc;
-}
-#team-section .card-client .social-media a {
-  position: relative;
-  margin-right: 15px;
-  text-decoration: none;
-  color: inherit;
-  /*-- Tooltip Social Media --*/
-}
-#team-section .card-client .social-media a:last-child {
-  margin-right: 0;
-}
-#team-section .card-client .social-media a:hover .tooltip-social {
-  opacity: 1;
-  transform: translate(-50%, 130%);
-}
-#team-section .card-client .social-media a svg {
-  width: 1.1rem;
-  fill: currentColor;
-}
-#team-section .card-client .social-media a .tooltip-social {
-  background: #262626;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  padding: 0.5rem 0.4rem;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, -90%);
-  transition: all 0.2s ease;
-  z-index: 1;
-}
-#team-section .card-client .social-media a .tooltip-social:after {
-  content: " ";
-  position: absolute;
-  bottom: 1px;
-  left: 50%;
-  border: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: transparent;
-  transform: translate(-50%, 100%);
+  height: 5px;
+  background-color: var(--color-primary);
 }
 
 /* team section ends *//*# sourceMappingURL=style.css.map */

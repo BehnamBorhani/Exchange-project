@@ -86,3 +86,8 @@ countersElem.forEach(function (counterElem) {
    }, 10);
 });
 /* counter scripts ends */
+
+/* team section starts */
+import { Card } from "../components/TeamCard/teamCard.js";
+window.customElements.define('team-card', Card);
+/* team section ends */
