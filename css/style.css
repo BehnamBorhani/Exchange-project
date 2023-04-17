@@ -570,6 +570,9 @@ header #banner {
 
 /* fact section ends*/
 /* team section starts */
+#team-section {
+  margin-bottom: 100px;
+}
 #team-section .section-title {
   display: grid;
   place-items: center;
@@ -591,4 +594,72 @@ header #banner {
   background-color: var(--color-primary);
 }
 
-/* team section ends *//*# sourceMappingURL=style.css.map */
+/* team section ends */
+/* investors section starts */
+#investors-section .section-title {
+  margin-bottom: 20px;
+}
+#investors-section .card {
+  width: 190px;
+  height: 120px;
+  transition: all 0.5s;
+  box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11), -15px -15px 30px rgba(60, 60, 60, 0.082);
+  text-align: center;
+  overflow: hidden;
+}
+#investors-section .card:hover {
+  height: 254px;
+  background: linear-gradient(360deg, rgba(237, 237, 237, 0.7725490196) 60%, hsl(0, 0%, 13%) 70%);
+}
+#investors-section .card:hover .header {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+}
+#investors-section .card:hover .header .title {
+  padding: 0;
+}
+#investors-section .card .header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+  margin-bottom: 16px;
+}
+#investors-section .card .header .img-box {
+  width: 50px;
+}
+#investors-section .card .header .title {
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 4px 0 14px 0;
+  transition: all 0.5s;
+  color: rgba(237, 237, 237, 0.7725490196);
+}
+#investors-section .card .content {
+  display: block;
+  text-align: justify;
+  color: #212121;
+  margin: 0 18px;
+}
+#investors-section .card .content p {
+  transition: all 0.5s;
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+#investors-section .card .content a {
+  color: #1d8122;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+#investors-section .card .content .btn-link:hover {
+  border-bottom: 1px solid #1d8122;
+}
+
+/* investors section ends *//*# sourceMappingURL=style.css.map */
