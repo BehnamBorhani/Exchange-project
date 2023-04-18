@@ -153,17 +153,6 @@ body::-webkit-scrollbar-thumb:hover {
   top: 0;
   z-index: 90;
   transition: background 0.4s;
-  /* ul {
-     width: 400px;
-     @include d-flex(space-between,center);
-     margin-left: 10px;
-     li a {
-        color: var(--bg);
-        font-size: 20px;
-        font-weight: 500;
-        transition: color 0.4s;
-     }
-  } */
   /* hamburger menu starts */
   /* darkmode switch starts */
   /* hamburger menu ends */
@@ -179,6 +168,19 @@ body::-webkit-scrollbar-thumb:hover {
 }
 #navbar .logo a svg {
   margin-left: 5px;
+}
+#navbar ul {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+}
+#navbar ul li a {
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.4s;
 }
 #navbar #menu__toggle {
   display: none;
@@ -405,7 +407,7 @@ header a {
   margin-right: 20px;
 }
 header #banner {
-  height: 700px;
+  height: 650px;
 }
 
 /* header ends */
@@ -570,6 +572,9 @@ header #banner {
 
 /* fact section ends*/
 /* team section starts */
+#team-section {
+  margin-bottom: 100px;
+}
 #team-section .section-title {
   display: grid;
   place-items: center;
@@ -591,4 +596,16 @@ header #banner {
   background-color: var(--color-primary);
 }
 
-/* team section ends *//*# sourceMappingURL=style.css.map */
+/* team section ends */
+/* investors section starts */
+#investors-section {
+  padding-bottom: 50px;
+}
+#investors-section .section-title {
+  margin-bottom: 20px;
+}
+#investors-section .row {
+  row-gap: 10px;
+}
+
+/* investors section ends *//*# sourceMappingURL=style.css.map */
