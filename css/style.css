@@ -153,17 +153,6 @@ body::-webkit-scrollbar-thumb:hover {
   top: 0;
   z-index: 90;
   transition: background 0.4s;
-  /* ul {
-     width: 400px;
-     @include d-flex(space-between,center);
-     margin-left: 10px;
-     li a {
-        color: var(--bg);
-        font-size: 20px;
-        font-weight: 500;
-        transition: color 0.4s;
-     }
-  } */
   /* hamburger menu starts */
   /* darkmode switch starts */
   /* hamburger menu ends */
@@ -179,6 +168,19 @@ body::-webkit-scrollbar-thumb:hover {
 }
 #navbar .logo a svg {
   margin-left: 5px;
+}
+#navbar ul {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+}
+#navbar ul li a {
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.4s;
 }
 #navbar #menu__toggle {
   display: none;
@@ -405,7 +407,7 @@ header a {
   margin-right: 20px;
 }
 header #banner {
-  height: 700px;
+  height: 650px;
 }
 
 /* header ends */
@@ -596,70 +598,14 @@ header #banner {
 
 /* team section ends */
 /* investors section starts */
+#investors-section {
+  padding-bottom: 50px;
+}
 #investors-section .section-title {
   margin-bottom: 20px;
 }
-#investors-section .card {
-  width: 190px;
-  height: 120px;
-  transition: all 0.5s;
-  box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11), -15px -15px 30px rgba(60, 60, 60, 0.082);
-  text-align: center;
-  overflow: hidden;
-}
-#investors-section .card:hover {
-  height: 254px;
-  background: linear-gradient(360deg, rgba(237, 237, 237, 0.7725490196) 60%, hsl(0, 0%, 13%) 70%);
-}
-#investors-section .card:hover .header {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
-}
-#investors-section .card:hover .header .title {
-  padding: 0;
-}
-#investors-section .card .header {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #212121;
-  margin-bottom: 16px;
-}
-#investors-section .card .header .img-box {
-  width: 50px;
-}
-#investors-section .card .header .title {
-  font-size: 1.1em;
-  letter-spacing: 0.1em;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 4px 0 14px 0;
-  transition: all 0.5s;
-  color: rgba(237, 237, 237, 0.7725490196);
-}
-#investors-section .card .content {
-  display: block;
-  text-align: justify;
-  color: #212121;
-  margin: 0 18px;
-}
-#investors-section .card .content p {
-  transition: all 0.5s;
-  font-size: 1em;
-  margin-bottom: 8px;
-}
-#investors-section .card .content a {
-  color: #1d8122;
-  cursor: pointer;
-  transition: all 0.5s;
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-#investors-section .card .content .btn-link:hover {
-  border-bottom: 1px solid #1d8122;
+#investors-section .row {
+  row-gap: 10px;
 }
 
 /* investors section ends *//*# sourceMappingURL=style.css.map */

@@ -89,5 +89,7 @@ countersElem.forEach(function (counterElem) {
 
 /* team section starts */
 import { Card } from "../components/TeamCard/teamCard.js";
+import { Investor } from "../components/InvestorCard/investorCard.js";
 window.customElements.define('team-card', Card);
+window.customElements.define('investor-card', Investor);
 /* team section ends */
