@@ -360,6 +360,161 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* sections Title ends*/
+/* footer starts */
+footer {
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+  color: var(--black);
+  padding-top: 30px;
+}
+footer h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+footer a:active, footer a:link, footer a:visited {
+  color: var(--black);
+}
+footer a:hover {
+  color: var(--color-primary);
+}
+footer .partitions {
+  padding-bottom: 10px;
+}
+footer .partitions dd {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+footer .partitions .community h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+footer .partitions .community .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+footer .partitions .community .main .up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+footer .partitions .community .main .up .card1 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+footer .partitions .community .main .up .card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+footer .partitions .community .main .up .card1:hover .instagram {
+  fill: white;
+}
+footer .partitions .community .main .up .card1 .instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+footer .partitions .community .main .up .card2 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+footer .partitions .community .main .up .card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #03a9f4;
+}
+footer .partitions .community .main .up .card2:hover .twitter {
+  fill: white;
+}
+footer .partitions .community .main .up .card2 .twitter {
+  margin-top: 1.5em;
+  margin-left: -0.9em;
+  fill: #03a9f4;
+}
+footer .partitions .community .main .down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+footer .partitions .community .main .down .card3 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+footer .partitions .community .main .down .card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+footer .partitions .community .main .down .card3:hover .github {
+  fill: white;
+}
+footer .partitions .community .main .down .card3 .github {
+  margin-top: -0.6em;
+  margin-left: 1.2em;
+}
+footer .partitions .community .main .down .card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+footer .partitions .community .main .down .card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #8c9eff;
+}
+footer .partitions .community .main .down .card4:hover .discord {
+  fill: white;
+}
+footer .partitions .community .main .down .card4 .discord {
+  margin-top: -0.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+footer .copy {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+footer .copy p {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  margin: auto;
+  color: var(--color-primary);
+}
+footer #top-hr {
+  margin-bottom: 20px;
+}
+
+/* footer ends */
 .btn {
   border: none;
   border-radius: 7px;
@@ -600,6 +755,7 @@ header #banner {
 /* investors section starts */
 #investors-section {
   padding-bottom: 50px;
+  height: 400px;
 }
 #investors-section .section-title {
   margin-bottom: 20px;
