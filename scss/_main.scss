@@ -157,7 +157,7 @@ body {
 
    ul {
       width: 400px;
-      @include d-flex(space-between,center);
+      @include d-flex(space-between, center);
       margin-left: 10px;
       li a {
          color: var(--black);
@@ -334,7 +334,6 @@ body {
 }
 /* navbar ends */
 
-
 /* sections Title starts */
 .section-title {
    display: grid;
@@ -357,3 +356,167 @@ body {
    }
 }
 /* sections Title ends*/
+
+/* footer starts */
+footer {
+   background: var(--light-bg);
+   box-shadow: var(--box-shadow);
+   color: var(--black);
+   padding-top: 30px;
+   h2 {
+      margin-bottom: 10px;
+      font-size: 25px;
+   }
+
+   a:active, a:link, a:visited {
+      color: var(--black);
+   }
+
+   a:hover {
+      color: var(--color-primary);
+   }
+
+   .community {
+      h2 {
+         text-align: center;
+      }
+
+      .main {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         gap: 0.5em;
+         .up {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5em;
+            .card1 {
+               width: 90px;
+               height: 90px;
+               outline: none;
+               border: none;
+               background: white;
+               border-radius: 90px 5px 5px 5px;
+               box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+               transition: 0.2s ease-in-out;
+               &:hover {
+                  cursor: pointer;
+                  scale: 1.1;
+                  background-color: #cc39a4;
+                  .instagram {
+                     fill: white;
+                  }
+               }
+               .instagram {
+                  margin-top: 1.5em;
+                  margin-left: 1.2em;
+                  fill: #cc39a4;
+               }
+            }
+            .card2 {
+               width: 90px;
+               height: 90px;
+               outline: none;
+               border: none;
+               background: white;
+               border-radius: 5px 90px 5px 5px;
+               box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+               transition: 0.2s ease-in-out;
+               &:hover {
+                  cursor: pointer;
+                  scale: 1.1;
+                  background-color: #03a9f4;
+                  .twitter {
+                     fill: white;
+                  }
+               }
+               .twitter {
+                  margin-top: 1.5em;
+                  margin-left: -0.9em;
+                  fill: #03a9f4;
+               }
+            }
+         }
+
+         .down {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5em;
+            .card3 {
+               width: 90px;
+               height: 90px;
+               outline: none;
+               border: none;
+               background: white;
+               border-radius: 5px 5px 5px 90px;
+               box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+               transition: 0.2s ease-in-out;
+               &:hover {
+                  cursor: pointer;
+                  scale: 1.1;
+                  background-color: black;
+                  .github {
+                     fill: white;
+                  }
+               }
+               .github {
+                  margin-top: -0.6em;
+                  margin-left: 1.2em;
+               }
+            }
+            .card4 {
+               width: 90px;
+               height: 90px;
+               outline: none;
+               border: none;
+               background: white;
+               border-radius: 5px 5px 90px 5px;
+               box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+               transition: 0.2s ease-in-out;
+               &:hover {
+                  cursor: pointer;
+                  scale: 1.1;
+                  background-color: #8c9eff;
+                  .discord {
+                     fill: white;
+                  }
+               }
+               .discord {
+                  margin-top: -0.9em;
+                  margin-left: -1.2em;
+                  fill: #8c9eff;
+               }
+            }
+         }
+      }
+   }
+
+   .partitions {
+      dd {
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 10px;
+         dl {
+         }
+      }
+   }
+
+   .copy {
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      p {
+         display: inline-block;
+         text-transform: uppercase;
+         letter-spacing: 5px;
+         text-align: center;
+         margin: auto;
+      }
+   }
+}
+/* footer ends */
