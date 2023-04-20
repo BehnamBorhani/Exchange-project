@@ -377,22 +377,31 @@ footer a:active, footer a:link, footer a:visited {
 footer a:hover {
   color: var(--color-primary);
 }
-footer .community h2 {
-  text-align: center;
+footer .partitions {
+  padding-bottom: 10px;
 }
-footer .community .main {
+footer .partitions dd {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+footer .partitions .community h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+footer .partitions .community .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.5em;
 }
-footer .community .main .up {
+footer .partitions .community .main .up {
   display: flex;
   flex-direction: row;
   gap: 0.5em;
 }
-footer .community .main .up .card1 {
+footer .partitions .community .main .up .card1 {
   width: 90px;
   height: 90px;
   outline: none;
@@ -402,20 +411,20 @@ footer .community .main .up .card1 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: 0.2s ease-in-out;
 }
-footer .community .main .up .card1:hover {
+footer .partitions .community .main .up .card1:hover {
   cursor: pointer;
   scale: 1.1;
   background-color: #cc39a4;
 }
-footer .community .main .up .card1:hover .instagram {
+footer .partitions .community .main .up .card1:hover .instagram {
   fill: white;
 }
-footer .community .main .up .card1 .instagram {
+footer .partitions .community .main .up .card1 .instagram {
   margin-top: 1.5em;
   margin-left: 1.2em;
   fill: #cc39a4;
 }
-footer .community .main .up .card2 {
+footer .partitions .community .main .up .card2 {
   width: 90px;
   height: 90px;
   outline: none;
@@ -425,25 +434,25 @@ footer .community .main .up .card2 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: 0.2s ease-in-out;
 }
-footer .community .main .up .card2:hover {
+footer .partitions .community .main .up .card2:hover {
   cursor: pointer;
   scale: 1.1;
   background-color: #03a9f4;
 }
-footer .community .main .up .card2:hover .twitter {
+footer .partitions .community .main .up .card2:hover .twitter {
   fill: white;
 }
-footer .community .main .up .card2 .twitter {
+footer .partitions .community .main .up .card2 .twitter {
   margin-top: 1.5em;
   margin-left: -0.9em;
   fill: #03a9f4;
 }
-footer .community .main .down {
+footer .partitions .community .main .down {
   display: flex;
   flex-direction: row;
   gap: 0.5em;
 }
-footer .community .main .down .card3 {
+footer .partitions .community .main .down .card3 {
   width: 90px;
   height: 90px;
   outline: none;
@@ -453,19 +462,19 @@ footer .community .main .down .card3 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: 0.2s ease-in-out;
 }
-footer .community .main .down .card3:hover {
+footer .partitions .community .main .down .card3:hover {
   cursor: pointer;
   scale: 1.1;
   background-color: black;
 }
-footer .community .main .down .card3:hover .github {
+footer .partitions .community .main .down .card3:hover .github {
   fill: white;
 }
-footer .community .main .down .card3 .github {
+footer .partitions .community .main .down .card3 .github {
   margin-top: -0.6em;
   margin-left: 1.2em;
 }
-footer .community .main .down .card4 {
+footer .partitions .community .main .down .card4 {
   width: 90px;
   height: 90px;
   outline: none;
@@ -475,26 +484,18 @@ footer .community .main .down .card4 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: 0.2s ease-in-out;
 }
-footer .community .main .down .card4:hover {
+footer .partitions .community .main .down .card4:hover {
   cursor: pointer;
   scale: 1.1;
   background-color: #8c9eff;
 }
-footer .community .main .down .card4:hover .discord {
+footer .partitions .community .main .down .card4:hover .discord {
   fill: white;
 }
-footer .community .main .down .card4 .discord {
+footer .partitions .community .main .down .card4 .discord {
   margin-top: -0.9em;
   margin-left: -1.2em;
   fill: #8c9eff;
-}
-footer .partitions {
-  padding-bottom: 10px;
-}
-footer .partitions dd {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
 }
 footer .copy {
   display: grid;
@@ -507,6 +508,7 @@ footer .copy p {
   letter-spacing: 5px;
   text-align: center;
   margin: auto;
+  color: var(--color-primary);
 }
 footer #top-hr {
   margin-bottom: 20px;

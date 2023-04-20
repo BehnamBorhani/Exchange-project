@@ -376,126 +376,6 @@ footer {
       color: var(--color-primary);
    }
 
-   .community {
-      h2 {
-         text-align: center;
-      }
-
-      .main {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         gap: 0.5em;
-         .up {
-            display: flex;
-            flex-direction: row;
-            gap: 0.5em;
-            .card1 {
-               width: 90px;
-               height: 90px;
-               outline: none;
-               border: none;
-               background: white;
-               border-radius: 90px 5px 5px 5px;
-               box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-                  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-               transition: 0.2s ease-in-out;
-               &:hover {
-                  cursor: pointer;
-                  scale: 1.1;
-                  background-color: #cc39a4;
-                  .instagram {
-                     fill: white;
-                  }
-               }
-               .instagram {
-                  margin-top: 1.5em;
-                  margin-left: 1.2em;
-                  fill: #cc39a4;
-               }
-            }
-            .card2 {
-               width: 90px;
-               height: 90px;
-               outline: none;
-               border: none;
-               background: white;
-               border-radius: 5px 90px 5px 5px;
-               box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-                  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-               transition: 0.2s ease-in-out;
-               &:hover {
-                  cursor: pointer;
-                  scale: 1.1;
-                  background-color: #03a9f4;
-                  .twitter {
-                     fill: white;
-                  }
-               }
-               .twitter {
-                  margin-top: 1.5em;
-                  margin-left: -0.9em;
-                  fill: #03a9f4;
-               }
-            }
-         }
-
-         .down {
-            display: flex;
-            flex-direction: row;
-            gap: 0.5em;
-            .card3 {
-               width: 90px;
-               height: 90px;
-               outline: none;
-               border: none;
-               background: white;
-               border-radius: 5px 5px 5px 90px;
-               box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-                  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-               transition: 0.2s ease-in-out;
-               &:hover {
-                  cursor: pointer;
-                  scale: 1.1;
-                  background-color: black;
-                  .github {
-                     fill: white;
-                  }
-               }
-               .github {
-                  margin-top: -0.6em;
-                  margin-left: 1.2em;
-               }
-            }
-            .card4 {
-               width: 90px;
-               height: 90px;
-               outline: none;
-               border: none;
-               background: white;
-               border-radius: 5px 5px 90px 5px;
-               box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-                  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-               transition: 0.2s ease-in-out;
-               &:hover {
-                  cursor: pointer;
-                  scale: 1.1;
-                  background-color: #8c9eff;
-                  .discord {
-                     fill: white;
-                  }
-               }
-               .discord {
-                  margin-top: -0.9em;
-                  margin-left: -1.2em;
-                  fill: #8c9eff;
-               }
-            }
-         }
-      }
-   }
-
    .partitions {
       padding-bottom: 10px;
       dd {
@@ -503,6 +383,127 @@ footer {
          flex-direction: column;
          margin-bottom: 10px;
          dl {
+         }
+      }
+
+      .community {
+         h2 {
+            text-align: center;
+            margin-bottom: 20px;
+         }
+   
+         .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5em;
+            .up {
+               display: flex;
+               flex-direction: row;
+               gap: 0.5em;
+               .card1 {
+                  width: 90px;
+                  height: 90px;
+                  outline: none;
+                  border: none;
+                  background: white;
+                  border-radius: 90px 5px 5px 5px;
+                  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                  transition: 0.2s ease-in-out;
+                  &:hover {
+                     cursor: pointer;
+                     scale: 1.1;
+                     background-color: #cc39a4;
+                     .instagram {
+                        fill: white;
+                     }
+                  }
+                  .instagram {
+                     margin-top: 1.5em;
+                     margin-left: 1.2em;
+                     fill: #cc39a4;
+                  }
+               }
+               .card2 {
+                  width: 90px;
+                  height: 90px;
+                  outline: none;
+                  border: none;
+                  background: white;
+                  border-radius: 5px 90px 5px 5px;
+                  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                  transition: 0.2s ease-in-out;
+                  &:hover {
+                     cursor: pointer;
+                     scale: 1.1;
+                     background-color: #03a9f4;
+                     .twitter {
+                        fill: white;
+                     }
+                  }
+                  .twitter {
+                     margin-top: 1.5em;
+                     margin-left: -0.9em;
+                     fill: #03a9f4;
+                  }
+               }
+            }
+   
+            .down {
+               display: flex;
+               flex-direction: row;
+               gap: 0.5em;
+               .card3 {
+                  width: 90px;
+                  height: 90px;
+                  outline: none;
+                  border: none;
+                  background: white;
+                  border-radius: 5px 5px 5px 90px;
+                  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                  transition: 0.2s ease-in-out;
+                  &:hover {
+                     cursor: pointer;
+                     scale: 1.1;
+                     background-color: black;
+                     .github {
+                        fill: white;
+                     }
+                  }
+                  .github {
+                     margin-top: -0.6em;
+                     margin-left: 1.2em;
+                  }
+               }
+               .card4 {
+                  width: 90px;
+                  height: 90px;
+                  outline: none;
+                  border: none;
+                  background: white;
+                  border-radius: 5px 5px 90px 5px;
+                  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                  transition: 0.2s ease-in-out;
+                  &:hover {
+                     cursor: pointer;
+                     scale: 1.1;
+                     background-color: #8c9eff;
+                     .discord {
+                        fill: white;
+                     }
+                  }
+                  .discord {
+                     margin-top: -0.9em;
+                     margin-left: -1.2em;
+                     fill: #8c9eff;
+                  }
+               }
+            }
          }
       }
    }
@@ -517,6 +518,7 @@ footer {
          letter-spacing: 5px;
          text-align: center;
          margin: auto;
+         color: var(--color-primary);
       }
    }
 
