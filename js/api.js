@@ -1,6 +1,8 @@
 /* market overview starts */
 async function fetchData() {
    let tableElem = document.querySelector("table tbody");
+   tableElem.innerHTML = "";
+
    let allCoins = await fetch(
       "https://api.coinlore.net/api/tickers/?start=0&limit=20"
    )
@@ -37,4 +39,5 @@ async function fetchData() {
 }
 
 fetchData();
+setInterval(fetchData,60000)
 /* market overview ends */
