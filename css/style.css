@@ -175,7 +175,22 @@ body::-webkit-scrollbar-thumb:hover {
   color: var(--black);
   font-size: 20px;
   font-weight: 500;
-  transition: color 0.4s;
+  transition: all 0.4s;
+  position: relative;
+}
+#navbar ul li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  background-color: var(--color-primary);
+  transition: all 0.5s;
+}
+#navbar ul li a:hover::after {
+  content: "";
+  width: 100%;
 }
 #navbar .hamburger-menu {
   margin-left: auto;
@@ -373,7 +388,9 @@ footer h2 {
   margin-bottom: 10px;
   font-size: 25px;
 }
-footer a:active, footer a:link, footer a:visited {
+footer a:active,
+footer a:link,
+footer a:visited {
   color: var(--black);
 }
 footer a:hover {
@@ -744,7 +761,6 @@ header #banner {
 /* investors section starts */
 #investors-section {
   padding-bottom: 50px;
-  height: 400px;
 }
 #investors-section .section-title {
   margin-bottom: 20px;
@@ -784,10 +800,16 @@ header #banner {
     justify-content: space-between;
     align-items: center;
   }
+  #navbar #menu__toggle:checked + .menu__btn {
+    margin-right: -20px;
+  }
   header h2 {
     margin-top: 150px;
   }
   header p {
     margin-bottom: 100px;
+  }
+  #investors-section {
+    height: 400px;
   }
 }/*# sourceMappingURL=style.css.map */

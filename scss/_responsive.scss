@@ -22,7 +22,7 @@
    }
 
    footer {
-      .community{
+      .community {
          margin-top: -110px;
       }
    }
@@ -30,7 +30,7 @@
 
 @media only screen and (min-width: 768px) {
    footer {
-      .community{
+      .community {
          margin-top: 0;
       }
    }
@@ -40,6 +40,12 @@
    #navbar {
       ul {
          @include d-flex(space-between, center);
+      }
+
+      #menu__toggle {
+         &:checked + .menu__btn {
+            margin-right: -20px;
+         }
       }
    }
 
@@ -51,6 +57,11 @@
       p {
          margin-bottom: 100px;
       }
+   }
+
+   
+   #investors-section {
+      height: 400px;
    }
 }
 

@@ -4,14 +4,14 @@ async function fetchData() {
    tableElem.innerHTML = "";
 
    let allCoins = await fetch(
-      "https://api.coinlore.net/api/tickers/?start=0&limit=20"
+      "https://api.coinlore.net/api/tickers/?start=0&limit=22"
    )
       .then((response) => response.json())
       .then((response) => response.data);
    // console.log(allCoins);
 
    let filteredCoin = allCoins.filter((coin) => {
-      return !["BUSD", "DOGE", "XRP", "STETH", "WBTC"].includes(coin.symbol);
+      return !["BUSD", "DOGE", "XRP", "STETH", "WBTC", "TON", "LEO"].includes(coin.symbol);
    });
 
    filteredCoin.forEach((coin, index) => {
@@ -21,7 +21,7 @@ async function fetchData() {
          <tr>
             <td>${index + 1}</td>
             <td class="name">
-               <img src="images/${coin.symbol}.png"/>
+               <img src="images/Coins/${coin.symbol}.png"/>
                <span>${coin.name}</span>
             </td>
             <td class="symbol">${coin.symbol}</td>
