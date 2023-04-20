@@ -143,9 +143,6 @@ body::-webkit-scrollbar-thumb:hover {
 #navbar {
   width: 100%;
   height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 25px 30px 20px 30px;
   box-shadow: var(--box-shadow);
   background-color: var(--light-bg);
@@ -154,13 +151,13 @@ body::-webkit-scrollbar-thumb:hover {
   z-index: 90;
   transition: background 0.4s;
   /* hamburger menu starts */
-  /* darkmode switch starts */
   /* hamburger menu ends */
 }
-#navbar .logo a {
+#navbar .fixed-right {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+}
+#navbar .logo a {
   font-size: 30px !important;
   font-weight: bold;
   letter-spacing: 3px;
@@ -171,38 +168,58 @@ body::-webkit-scrollbar-thumb:hover {
 }
 #navbar ul {
   width: 400px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 10px;
+  display: none;
+  margin-left: auto;
 }
 #navbar ul li a {
   color: var(--black);
   font-size: 20px;
   font-weight: 500;
-  transition: color 0.4s;
+  transition: all 0.4s;
+  position: relative;
 }
-#navbar #menu__toggle {
+#navbar ul li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  background-color: var(--color-primary);
+  transition: all 0.5s;
+}
+#navbar ul li a:hover::after {
+  content: "";
+  width: 100%;
+}
+#navbar .hamburger-menu {
+  margin-left: auto;
+  margin-top: -8px;
+  /* darkmode switch starts */
+}
+#navbar .hamburger-menu #menu__toggle {
   display: none;
+  position: absolute;
+  right: 0;
 }
-#navbar #menu__toggle:checked + .menu__btn > span {
+#navbar .hamburger-menu #menu__toggle:checked + .menu__btn > span {
   transform: rotate(45deg);
   background-color: var(--black);
 }
-#navbar #menu__toggle:checked + .menu__btn > span::before {
+#navbar .hamburger-menu #menu__toggle:checked + .menu__btn > span::before {
   top: 0;
   background-color: var(--black);
   transform: rotate(0deg);
 }
-#navbar #menu__toggle:checked + .menu__btn > span::after {
+#navbar .hamburger-menu #menu__toggle:checked + .menu__btn > span::after {
   top: 0;
   background-color: var(--black);
   transform: rotate(90deg);
 }
-#navbar #menu__toggle:checked ~ .menu__box {
+#navbar .hamburger-menu #menu__toggle:checked ~ .menu__box {
   right: 0 !important;
 }
-#navbar .menu__btn {
+#navbar .hamburger-menu .menu__btn {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -211,7 +228,7 @@ body::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   z-index: 1;
 }
-#navbar .menu__btn > span, #navbar .menu__btn > span::before, #navbar .menu__btn > span::after {
+#navbar .hamburger-menu .menu__btn > span, #navbar .hamburger-menu .menu__btn > span::before, #navbar .hamburger-menu .menu__btn > span::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -219,15 +236,15 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: var(--black);
   transition-duration: 0.25s;
 }
-#navbar .menu__btn > span::before {
+#navbar .hamburger-menu .menu__btn > span::before {
   content: "";
   top: -10px;
 }
-#navbar .menu__btn > span::after {
+#navbar .hamburger-menu .menu__btn > span::after {
   content: "";
   top: 10px;
 }
-#navbar .menu__box {
+#navbar .hamburger-menu .menu__box {
   display: block;
   position: fixed;
   top: 0;
@@ -243,7 +260,7 @@ body::-webkit-scrollbar-thumb:hover {
   /* dynamic color setting starts */
   /* dynamic color setting ends */
 }
-#navbar .menu__box .menu__item {
+#navbar .hamburger-menu .menu__box .menu__item {
   display: block;
   padding: 12px 24px;
   color: #333;
@@ -254,24 +271,24 @@ body::-webkit-scrollbar-thumb:hover {
   text-align: center;
   transition-duration: 0.25s;
 }
-#navbar .menu__box .menu__item:hover {
+#navbar .hamburger-menu .menu__box .menu__item:hover {
   background-color: #cfd8dc;
 }
-#navbar .menu__box #setting {
+#navbar .hamburger-menu .menu__box #setting {
   width: 80%;
   margin: auto;
   margin-top: 50px;
 }
-#navbar .menu__box #setting hr {
+#navbar .hamburger-menu .menu__box #setting hr {
   border-color: #000;
 }
-#navbar .menu__box #themes {
+#navbar .hamburger-menu .menu__box #themes {
   padding: 20px;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
 }
-#navbar .menu__box #themes .theme {
+#navbar .hamburger-menu .menu__box #themes .theme {
   height: 25px;
   width: 25px;
   border: 3px solid #dddddd;
@@ -279,22 +296,22 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 50%;
   cursor: pointer;
 }
-#navbar .menu__box #themes .theme1 {
+#navbar .hamburger-menu .menu__box #themes .theme1 {
   background-color: #3498db;
 }
-#navbar .menu__box #themes .theme2 {
+#navbar .hamburger-menu .menu__box #themes .theme2 {
   background-color: #ff1756;
 }
-#navbar .menu__box #themes .theme3 {
+#navbar .hamburger-menu .menu__box #themes .theme3 {
   background-color: #1cb65d;
 }
-#navbar .menu__box #themes .theme4 {
+#navbar .hamburger-menu .menu__box #themes .theme4 {
   background-color: #8e44ad;
 }
-#navbar .menu__box #themes .theme5 {
+#navbar .hamburger-menu .menu__box #themes .theme5 {
   background-color: #f4b932;
 }
-#navbar .switch {
+#navbar .hamburger-menu .switch {
   width: 80px;
   height: 40px;
   border-radius: 20px;
@@ -303,7 +320,7 @@ body::-webkit-scrollbar-thumb:hover {
   margin: auto;
   /* darkmode switch ends */
 }
-#navbar .switch .flicker {
+#navbar .hamburger-menu .switch .flicker {
   width: 30px;
   height: 30px;
   border-radius: 15px;
@@ -314,7 +331,7 @@ body::-webkit-scrollbar-thumb:hover {
   transition: 0.3s;
   box-shadow: inset 4px 4px 4px var(--bg);
 }
-#navbar .switch .moon {
+#navbar .hamburger-menu .switch .moon {
   width: 20px;
   height: 20px;
   border-radius: 10px;
@@ -371,7 +388,9 @@ footer h2 {
   margin-bottom: 10px;
   font-size: 25px;
 }
-footer a:active, footer a:link, footer a:visited {
+footer a:active,
+footer a:link,
+footer a:visited {
   color: var(--black);
 }
 footer a:hover {
@@ -569,12 +588,16 @@ header #banner {
 /* market overview starts */
 #market-overview {
   width: 80%;
+  height: 1340px;
   margin: auto;
   font-size: 20px;
   font-weight: bold;
   color: var(--black);
 }
-#market-overview table {
+#market-overview .container {
+  max-width: auto;
+}
+#market-overview .container table {
   width: 100%;
   background-color: var(--bg);
   box-shadow: var(--box-shadow);
@@ -582,38 +605,38 @@ header #banner {
   border-radius: 10px;
   padding: 10px;
 }
-#market-overview table caption {
+#market-overview .container table caption {
   color: var(--black);
   padding-bottom: 10px;
 }
-#market-overview table td {
+#market-overview .container table td {
   width: 20%;
   text-align: center;
 }
-#market-overview table td:first-child {
+#market-overview .container table td:first-child {
   width: 5%;
 }
-#market-overview table thead {
+#market-overview .container table thead {
   text-align: center;
 }
-#market-overview table thead td {
+#market-overview .container table thead td {
   padding: 10px;
 }
-#market-overview table tbody tr td {
+#market-overview .container table tbody tr td {
   border-top: 1px solid black;
   padding: 10px 0;
 }
-#market-overview table tbody tr .name {
+#market-overview .container table tbody tr .name {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-#market-overview table tbody tr .name img {
+#market-overview .container table tbody tr .name img {
   width: 30px;
   margin: 10px 30px 20px 10px;
 }
-#market-overview table tbody tr .chart img {
+#market-overview .container table tbody tr .chart img {
   color: red;
 }
 
@@ -621,28 +644,15 @@ header #banner {
 /* fact section starts*/
 #facts-sec {
   width: 100%;
-  height: 600px;
   margin-top: 70px;
   margin-bottom: 50px;
   direction: rtl;
 }
-#facts-sec .container {
-  margin: auto;
-  width: 90%;
-  max-width: 1200px;
-}
-#facts-sec .container .row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
 #facts-sec .container .row .right {
-  grid-column: span 6;
   margin: 30px;
-  padding: 15px;
   position: relative;
 }
 #facts-sec .container .row .right .img-container {
-  position: relative;
   filter: drop-shadow(0 0 5px var(--black));
 }
 #facts-sec .container .row .right .img-container img {
@@ -654,10 +664,7 @@ header #banner {
   bottom: -10px;
 }
 #facts-sec .container .row .left {
-  grid-column: span 6;
   margin: 30px;
-  padding: 15px;
-  padding-right: 50px;
 }
 #facts-sec .container .row .left .facts-sec_content .facts-sec_title h3 {
   font-size: 35px;
@@ -685,15 +692,14 @@ header #banner {
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
+  max-height: 150px;
+  overflow: hidden;
   color: var(--black);
 }
 #facts-sec .container .row .left .counter-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
   gap: 40px;
 }
 #facts-sec .container .row .left .counter-container .box {
-  grid-column: span 4;
   border-radius: 70px;
   height: 170px;
   display: grid;
@@ -755,7 +761,6 @@ header #banner {
 /* investors section starts */
 #investors-section {
   padding-bottom: 50px;
-  height: 400px;
 }
 #investors-section .section-title {
   margin-bottom: 20px;
@@ -764,4 +769,47 @@ header #banner {
   row-gap: 10px;
 }
 
-/* investors section ends *//*# sourceMappingURL=style.css.map */
+/* investors section ends */
+@media only screen and (max-width: 576px) {
+  header h2 {
+    margin-top: 50px;
+  }
+  header p {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  header h2 {
+    margin-top: 100px;
+  }
+  header p {
+    margin-bottom: 50px;
+  }
+  footer .community {
+    margin-top: -110px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  footer .community {
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #navbar #menu__toggle:checked + .menu__btn {
+    margin-right: -20px;
+  }
+  header h2 {
+    margin-top: 150px;
+  }
+  header p {
+    margin-bottom: 100px;
+  }
+  #investors-section {
+    height: 400px;
+  }
+}/*# sourceMappingURL=style.css.map */

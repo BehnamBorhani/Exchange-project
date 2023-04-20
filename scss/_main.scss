@@ -134,7 +134,7 @@ body {
 #navbar {
    width: 100%;
    height: 75px;
-   @include d-flex(space-between, center);
+   // @include d-flex(space-between, center);
    padding: 25px 30px 20px 30px;
    box-shadow: var(--box-shadow);
    background-color: var(--light-bg);
@@ -142,9 +142,13 @@ body {
    top: 0;
    z-index: 90;
    transition: background 0.4s;
+   .fixed-right {
+      display: flex;
+      justify-content: flex-end;
+   }
+
    .logo {
       a {
-         @include d-flex(center, center);
          font-size: 30px !important;
          font-weight: bold;
          letter-spacing: 3px;
@@ -157,166 +161,192 @@ body {
 
    ul {
       width: 400px;
-      @include d-flex(space-between, center);
-      margin-left: 10px;
+      display: none;
+      margin-left: auto;
       li a {
          color: var(--black);
          font-size: 20px;
          font-weight: 500;
-         transition: color 0.4s;
+         transition: all 0.4s;
+         position: relative;
+         &::after {
+            content: "";
+            display: block;
+            width: 0%;
+            height: 3px;
+            position: absolute;
+            bottom: -10px;
+            background-color: var(--color-primary);
+            transition: all 0.5s;
+         }
+
+         &:hover {
+            &::after {
+               content: "";
+               width: 100%;
+            }
+         }
       }
    }
 
    /* hamburger menu starts */
-   #menu__toggle {
-      display: none;
-      &:checked + .menu__btn > span {
-         transform: rotate(45deg);
-         background-color: var(--black);
-         &::before {
-            top: 0;
-            background-color: var(--black);
-            transform: rotate(0deg);
-         }
-
-         &::after {
-            top: 0;
-            background-color: var(--black);
-            transform: rotate(90deg);
-         }
-      }
-
-      &:checked ~ .menu__box {
-         right: 0 !important;
-      }
-   }
-
-   .menu__btn {
-      @include d-flex(flex-start, center);
-      width: 30px;
-      height: 40px;
-      cursor: pointer;
-      z-index: 1;
-      & > span,
-      & > span::before,
-      & > span::after {
-         display: block;
+   .hamburger-menu {
+      margin-left: auto;
+      margin-top: -8px;
+      #menu__toggle {
+         display: none;
          position: absolute;
-         width: 100%;
-         height: 3px;
-         background-color: var(--black);
-         transition-duration: 0.25s;
-      }
+         right: 0;
+         &:checked + .menu__btn {
+            & > span {
+               transform: rotate(45deg);
+               background-color: var(--black);
+               &::before {
+                  top: 0;
+                  background-color: var(--black);
+                  transform: rotate(0deg);
+               }
 
-      & > span::before {
-         content: "";
-         top: -10px;
-      }
-      & > span::after {
-         content: "";
-         top: 10px;
-      }
-   }
+               &::after {
+                  top: 0;
+                  background-color: var(--black);
+                  transform: rotate(90deg);
+               }
+            }
+         }
 
-   .menu__box {
-      display: block;
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 300px;
-      height: 100%;
-      margin: 0;
-      padding: 80px 0;
-      list-style: none;
-      background-color: var(--color-primary);
-      box-shadow: var(--box-shadow1);
-      transition-duration: 0.25s;
-      .menu__item {
-         display: block;
-         padding: 12px 24px;
-         color: #333;
-         font-family: "Roboto", sans-serif;
-         font-size: 20px;
-         font-weight: 600;
-         text-decoration: none;
-         text-align: center;
-         transition-duration: 0.25s;
-         &:hover {
-            background-color: #cfd8dc;
+         &:checked ~ .menu__box {
+            right: 0 !important;
          }
       }
 
-      /* dynamic color setting starts */
-      #setting {
-         width: 80%;
-         margin: auto;
-         margin-top: 50px;
-         hr {
-            border-color: #000;
-         }
-      }
-
-      #themes {
-         padding: 20px;
-         @include d-flex(space-around);
-         .theme {
-            height: 25px;
-            width: 25px;
-            border: 3px solid #dddddd;
-            outline: none;
-            border-radius: 50%;
-            cursor: pointer;
-         }
-
-         .theme1 {
-            background-color: #3498db;
-         }
-         .theme2 {
-            background-color: #ff1756;
-         }
-         .theme3 {
-            background-color: #1cb65d;
-         }
-         .theme4 {
-            background-color: #8e44ad;
-         }
-         .theme5 {
-            background-color: #f4b932;
-         }
-      }
-      /* dynamic color setting ends */
-   }
-
-   /* darkmode switch starts */
-   .switch {
-      width: 80px;
-      height: 40px;
-      border-radius: 20px;
-      background-color: var(--black);
-      position: relative;
-      margin: auto;
-      .flicker {
+      .menu__btn {
+         @include d-flex(flex-start, center);
          width: 30px;
-         height: 30px;
-         border-radius: 15px;
-         background-color: var(--bg);
-         position: absolute;
-         top: 5px;
-         left: 5px;
-         transition: 0.3s;
-         box-shadow: inset 4px 4px 4px var(--bg);
+         height: 40px;
+         cursor: pointer;
+         z-index: 1;
+         & > span,
+         & > span::before,
+         & > span::after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: var(--black);
+            transition-duration: 0.25s;
+         }
+
+         & > span::before {
+            content: "";
+            top: -10px;
+         }
+         & > span::after {
+            content: "";
+            top: 10px;
+         }
       }
 
-      .moon {
-         width: 20px;
-         height: 20px;
-         border-radius: 10px;
-         box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
-         position: absolute;
-         top: 5px;
-         left: 45px;
+      .menu__box {
+         display: block;
+         position: fixed;
+         top: 0;
+         right: -100%;
+         width: 300px;
+         height: 100%;
+         margin: 0;
+         padding: 80px 0;
+         list-style: none;
+         background-color: var(--color-primary);
+         box-shadow: var(--box-shadow1);
+         transition-duration: 0.25s;
+         .menu__item {
+            display: block;
+            padding: 12px 24px;
+            color: #333;
+            font-family: "Roboto", sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition-duration: 0.25s;
+            &:hover {
+               background-color: #cfd8dc;
+            }
+         }
+
+         /* dynamic color setting starts */
+         #setting {
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+            hr {
+               border-color: #000;
+            }
+         }
+
+         #themes {
+            padding: 20px;
+            @include d-flex(space-around);
+            .theme {
+               height: 25px;
+               width: 25px;
+               border: 3px solid #dddddd;
+               outline: none;
+               border-radius: 50%;
+               cursor: pointer;
+            }
+
+            .theme1 {
+               background-color: #3498db;
+            }
+            .theme2 {
+               background-color: #ff1756;
+            }
+            .theme3 {
+               background-color: #1cb65d;
+            }
+            .theme4 {
+               background-color: #8e44ad;
+            }
+            .theme5 {
+               background-color: #f4b932;
+            }
+         }
+         /* dynamic color setting ends */
       }
-      /* darkmode switch ends */
+
+      /* darkmode switch starts */
+      .switch {
+         width: 80px;
+         height: 40px;
+         border-radius: 20px;
+         background-color: var(--black);
+         position: relative;
+         margin: auto;
+         .flicker {
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: var(--bg);
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            transition: 0.3s;
+            box-shadow: inset 4px 4px 4px var(--bg);
+         }
+
+         .moon {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+            position: absolute;
+            top: 5px;
+            left: 45px;
+         }
+         /* darkmode switch ends */
+      }
    }
    /* hamburger menu ends */
 }
@@ -368,7 +398,9 @@ footer {
       font-size: 25px;
    }
 
-   a:active, a:link, a:visited {
+   a:active,
+   a:link,
+   a:visited {
       color: var(--black);
    }
 
@@ -391,7 +423,7 @@ footer {
             text-align: center;
             margin-bottom: 20px;
          }
-   
+
          .main {
             display: flex;
             flex-direction: column;
@@ -451,7 +483,7 @@ footer {
                   }
                }
             }
-   
+
             .down {
                display: flex;
                flex-direction: row;

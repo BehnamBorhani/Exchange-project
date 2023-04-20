@@ -1,0 +1,69 @@
+@media only screen and (max-width: 576px) {
+   header {
+      h2 {
+         margin-top: 50px;
+      }
+
+      p {
+         margin-bottom: 50px;
+      }
+   }
+}
+
+@media only screen and (min-width: 576px) {
+   header {
+      h2 {
+         margin-top: 100px;
+      }
+
+      p {
+         margin-bottom: 50px;
+      }
+   }
+
+   footer {
+      .community {
+         margin-top: -110px;
+      }
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   footer {
+      .community {
+         margin-top: 0;
+      }
+   }
+}
+
+@media only screen and (min-width: 992px) {
+   #navbar {
+      ul {
+         @include d-flex(space-between, center);
+      }
+
+      #menu__toggle {
+         &:checked + .menu__btn {
+            margin-right: -20px;
+         }
+      }
+   }
+
+   header {
+      h2 {
+         margin-top: 150px;
+      }
+
+      p {
+         margin-bottom: 100px;
+      }
+   }
+
+   
+   #investors-section {
+      height: 400px;
+   }
+}
+
+@media only screen and (min-width: 1200px) {
+}

@@ -3,7 +3,7 @@ template.innerHTML = `
     <link rel="stylesheet" href="components/TeamCard/teamCard.css">
     <div class="card-client">
          <div class="user-picture">
-             <img src="images/team/L1.jpg">
+             <img src="images/Team/L1.jpg">
          </div>
          <p class="name-client"> Jhon Doe
              <span>CEO of WritBook</span>
