@@ -622,28 +622,15 @@ header #banner {
 /* fact section starts*/
 #facts-sec {
   width: 100%;
-  height: 600px;
   margin-top: 70px;
   margin-bottom: 50px;
   direction: rtl;
 }
-#facts-sec .container {
-  margin: auto;
-  width: 90%;
-  max-width: 1200px;
-}
-#facts-sec .container .row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
 #facts-sec .container .row .right {
-  grid-column: span 6;
   margin: 30px;
-  padding: 15px;
   position: relative;
 }
 #facts-sec .container .row .right .img-container {
-  position: relative;
   filter: drop-shadow(0 0 5px var(--black));
 }
 #facts-sec .container .row .right .img-container img {
@@ -655,10 +642,7 @@ header #banner {
   bottom: -10px;
 }
 #facts-sec .container .row .left {
-  grid-column: span 6;
   margin: 30px;
-  padding: 15px;
-  padding-right: 50px;
 }
 #facts-sec .container .row .left .facts-sec_content .facts-sec_title h3 {
   font-size: 35px;
@@ -686,15 +670,14 @@ header #banner {
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
+  max-height: 150px;
+  overflow: hidden;
   color: var(--black);
 }
 #facts-sec .container .row .left .counter-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
   gap: 40px;
 }
 #facts-sec .container .row .left .counter-container .box {
-  grid-column: span 4;
   border-radius: 70px;
   height: 170px;
   display: grid;
