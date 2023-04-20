@@ -1,0 +1,33 @@
+@mixin d-flex($justify: flex-start, $align: flex-start) {
+   display: flex;
+   justify-content: $justify;
+   align-items: $align;
+}
+
+@mixin d-grid($columns, $gap) {
+   display: grid;
+   grid-template-columns: $columns;
+   gap: $gap;
+}
+
+.btn {
+   border: none;
+   border-radius: 7px;
+   font-size: 20px;
+   font-weight: 700;
+   color: #fff;
+   background: var(--color-primary);
+   box-shadow: 0 0 25px var(--color-primary);
+   padding: 10px 20px;
+   transition: box-shadow 0.5s;
+   &:hover {
+      box-shadow: 0 0 5px var(--color-primary), 0 0 25px var(--color-primary),
+         0 0 50px var(--color-primary), 0 0 100px var(--color-primary);
+   }
+}
+
+.btn2 {
+   color: var(--color-primary);
+   border: 2px solid var(--color-primary);
+   background-color: #fff;
+}

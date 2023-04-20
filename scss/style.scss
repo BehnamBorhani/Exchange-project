@@ -1,2 +1,261 @@
 @import "main";
+@import "layouts";
 
+/* header starts */
+header {
+   width: 100%;
+   margin-top: 40px;
+   font-size: 2rem;
+   color: var(--black);
+   h2 {
+      font-weight: 100;
+      font-size: 3.5rem;
+      height: 60px;
+      margin-top: 150px;
+   }
+
+   #highlight {
+      color: var(--color-primary);
+      opacity: 1;
+      transition: all 1s;
+   }
+
+   p {
+      font-size: 1.5rem;
+      margin-bottom: 100px;
+   }
+
+   a {
+      margin-right: 20px;
+   }
+
+   #banner {
+      height: 650px;
+   }
+}
+/* header ends */
+
+/* market overview starts */
+#market-overview {
+   width: 80%;
+   margin: auto;
+   font-size: 20px;
+   font-weight: bold;
+   color: var(--black);
+   table {
+      width: 100%;
+      background-color: var(--bg);
+      box-shadow: var(--box-shadow);
+      border: var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      caption {
+         color: var(--black);
+         padding-bottom: 10px;
+      }
+
+      td {
+         width: 20%;
+         text-align: center;
+         &:first-child {
+            width: 5%;
+         }
+      }
+
+      thead {
+         text-align: center;
+         td {
+            padding: 10px;
+         }
+      }
+
+      tbody {
+         tr {
+            td {
+               border-top: 1px solid black;
+               padding: 10px 0;
+            }
+
+            .name {
+               width: 100%;
+               @include d-flex(flex-start, center);
+               img {
+                  width: 30px;
+                  margin: 10px 30px 20px 10px;
+               }
+            }
+
+            .price {
+               // text-align: center;
+            }
+
+            .change {
+               // text-align: center;
+            }
+
+            .chart {
+               img {
+                  color: red;
+               }
+            }
+         }
+      }
+   }
+}
+/* market overview ends */
+
+/* fact section starts*/
+#facts-sec {
+   width: 100%;
+   height: 600px;
+   margin-top: 70px;
+   margin-bottom: 50px;
+   direction: rtl;
+   .container {
+      margin: auto;
+      width: 90%;
+      max-width: 1200px;
+      .row {
+         display: grid;
+         grid-template-columns: repeat(12, 1fr);
+         .right {
+            grid-column: span 6;
+            margin: 30px;
+            padding: 15px;
+            position: relative;
+            .img-container {
+               position: relative;
+               filter: drop-shadow(0 0 5px var(--black));
+               img {
+                  width: 100%;
+               }
+            }
+
+            #dots {
+               position: absolute;
+               right: -20px;
+               bottom: -10px;
+            }
+         }
+
+         .left {
+            grid-column: span 6;
+            margin: 30px;
+            padding: 15px;
+            padding-right: 50px;
+            .facts-sec_content {
+               .facts-sec_title {
+                  h3 {
+                     font-size: 35px;
+                     font-weight: bold;
+                     position: relative;
+                     margin-top: 15px;
+                     color: var(--color-primary);
+                     &::before {
+                        content: "";
+                        display: block;
+                        width: 150px;
+                        height: 5px;
+                        position: absolute;
+                        top: -15px;
+                        background: var(--bg-pink-gradient);
+                     }
+                     span {
+                        font-size: 32px;
+                        font-weight: lighter;
+                        color: var(--black);
+                     }
+                  }
+               }
+
+               .facts-sec_text {
+                  margin: 35px 0;
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 30px;
+                  color: var(--black);
+               }
+            }
+
+            .counter-container {
+               display: grid;
+               grid-template-columns: repeat(12, 1fr);
+               gap: 40px;
+               .box {
+                  grid-column: span 4;
+                  border-radius: 70px;
+                  height: 170px;
+                  display: grid;
+                  place-content: center;
+                  background: var(--bg-green-gradient);
+                  box-shadow: var(--box-shadow1);
+                  border: var(--border);
+                  transform: rotate(-45deg);
+                  .counter-item {
+                     text-align: center;
+                     transform: rotate(45deg);
+                     .counter {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 25px;
+                        font-weight: bold;
+                        color: #fff;
+                     }
+                     .counter-title {
+                        font-size: 18px;
+                        font-weight: normal;
+                        color: #fff;
+                     }
+                  }
+               }
+               .box2 {
+                  background: var(--bg-pink-gradient);
+               }
+               .box3 {
+                  background: var(--bg-blue-gradient);
+               }
+            }
+         }
+      }
+   }
+}
+/* fact section ends*/
+
+/* team section starts */
+#team-section {
+   margin-bottom: 100px;
+   .section-title {
+      display: grid;
+      place-items: center;
+      h2 {
+         font-size: 40px;
+         display: inline-block;
+         text-transform: uppercase;
+         text-align: center;
+         margin: auto;
+         color: var(--black);
+         &::after {
+            content: "";
+            display: block;
+            margin: 10px auto;
+            width: 100%;
+            height: 5px;
+            background-color: var(--color-primary);
+         }
+      }
+   }
+}
+/* team section ends */
+
+/* investors section starts */
+#investors-section {
+   padding-bottom: 50px;
+   height: 400px;
+   .section-title{
+      margin-bottom: 20px;
+   }
+
+   .row {
+      row-gap: 10px;
+   }
+}
+/* investors section ends */
