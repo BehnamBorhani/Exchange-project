@@ -488,6 +488,9 @@ footer .community .main .down .card4 .discord {
   margin-left: -1.2em;
   fill: #8c9eff;
 }
+footer .partitions {
+  padding-bottom: 10px;
+}
 footer .partitions dd {
   display: flex;
   flex-direction: column;
@@ -504,6 +507,9 @@ footer .copy p {
   letter-spacing: 5px;
   text-align: center;
   margin: auto;
+}
+footer #top-hr {
+  margin-bottom: 20px;
 }
 
 /* footer ends */
