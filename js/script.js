@@ -8,8 +8,8 @@ window.addEventListener("load", function () {
 
 /* navbar starts */
 const navbar = document.querySelector("#navbar");
-// const logoImg = document.querySelector(".logo img");
 let customScroll = document.querySelector("#scroll");
+// const logoImg = document.querySelector(".logo img");
 
 document.addEventListener("scroll", function () {
    let scrollTop = window.scrollY;
@@ -19,15 +19,15 @@ document.addEventListener("scroll", function () {
    let scrollPercentRounded = Math.round(scrollPercent * 100);
    customScroll.style.width = scrollPercentRounded + "%";
 
-   if (document.documentElement.scrollTop > 0) {
-      // logoImg.style.height = "30px";
-      /* navbar.classList.add("bg-black");
-      navbar.classList.add("txt-white"); */
+   /* if (document.documentElement.scrollTop > 0) {
+      logoImg.style.height = "30px";
+      navbar.classList.add("bg-black");
+      navbar.classList.add("txt-white");
    } else {
-      // logoImg.style.height = "30px";
-      /* navbar.classList.remove("bg-black");
-      navbar.classList.remove("txt-white"); */
-   }
+      logoImg.style.height = "30px";
+      navbar.classList.remove("bg-black");
+      navbar.classList.remove("txt-white");
+   } */
 });
 /* navbar ends */
 
@@ -89,7 +89,10 @@ countersElem.forEach(function (counterElem) {
 
 /* team section starts */
 import { Card } from "../components/TeamCard/teamCard.js";
-import { Investor } from "../components/InvestorCard/investorCard.js";
 window.customElements.define('team-card', Card);
-window.customElements.define('investor-card', Investor);
 /* team section ends */
+
+/* investor section starts */
+import { Investor } from "../components/InvestorCard/investorCard.js";
+window.customElements.define('investor-card', Investor);
+/* investor section ends */
